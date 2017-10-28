@@ -1,0 +1,7 @@
+---
+title: "ES6 Student Grades"
+type: "exercise"  # challenge, exercise, article, video
+description: "Practice ES6 class syntax."
+tags: "es6"
+ignore:
+- "es6-student-grades.md"
