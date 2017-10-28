@@ -1,5 +1,9 @@
 // define your student class, here
 
+class Student {
+  
+}
+
 // create a new student object
 let james = new Student("James", [80, 75.3, 90, 88, 70]);
 
