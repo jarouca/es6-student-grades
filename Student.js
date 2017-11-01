@@ -1,7 +1,7 @@
 // define your student class, here
 
 class Student {
-  
+
 }
 
 // create a new student object
