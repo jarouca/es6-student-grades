@@ -64,3 +64,15 @@ let exampleFour = function (array) {
 
 let arrayOfClosures = exampleFour(['Eureka!']);
 arrayOfClosures[0](); // 'Eureka!'
+
+// Example 7
+let countrySingers = ['Luke Bryan', 'Florida Georgia Line', 'Carrie Underwood']
+for (let i = 0, length = countrySingers.length; i < length; i++) {
+  console.log(countrySingers[i]);
+}
+
+// Example 8
+let countrySingers = ['Luke Bryan', 'Florida Georgia Line', 'Carrie Underwood']
+for (let countrySinger of countrySingers) {
+  console.log(countrySinger);
+}
