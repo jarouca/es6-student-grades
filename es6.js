@@ -76,3 +76,24 @@ let countrySingers = ['Luke Bryan', 'Florida Georgia Line', 'Carrie Underwood']
 for (let countrySinger of countrySingers) {
   console.log(countrySinger);
 }
+
+let pokemon = ['Pikachu', 'Magikarp', 'Psyduck'];
+let pikachu = pokemon[0];
+let magikarp = pokemon[1];
+let psyduck = pokemon[2];
+pikachu; // 'Pikachu'
+magikarp; // 'Magikarp'
+psyduck; // 'Psyduck'
+
+// Example 10
+let pokemon = ['Pikachu', 'Magikarp', 'Psyduck'];
+let [pikachu, magikarp, psyduck] = pokemon;
+pikachu; // 'Pikachu'
+magikarp; // 'Magikarp'
+psyduck; // 'Psyduck'
+
+// Example 11
+let pokemon = ['Pikachu', 'Magikarp', 'Psyduck'];
+let [pikachu, , psyduck] = pokemon;
+pikachu; // 'Pikachu'
+psyduck; // 'Psyduck'
