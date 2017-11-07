@@ -97,3 +97,10 @@ let pokemon = ['Pikachu', 'Magikarp', 'Psyduck'];
 let [pikachu, , psyduck] = pokemon;
 pikachu; // 'Pikachu'
 psyduck; // 'Psyduck'
+
+// Example 14
+let pokemon = ['Pikachu', 'Magikarp', 'Psyduck'];
+let newPokemon = [pokemon[0], pokemon[1], pokemon[2]];
+pokemon; // ['Pikachu', 'Magikarp', 'Psyduck']
+newPokemon; // ['Pikachu', 'Magikarp', 'Psyduck']
+pokemon === newPokemon; // false
