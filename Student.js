@@ -9,7 +9,7 @@ class Student {
   averageGrade() {
     let total = 0;
     for (let grade of this.grades) {
-      grade += total;
+      total += grade;
     }
     return total / this.grades.length
   }
