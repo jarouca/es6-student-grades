@@ -15,7 +15,7 @@ class Student {
   }
 
   toString() {
-    return this.name + " has an average grade of " + this.averageGrade
+    return this.name + " has an average grade of " + this.averageGrade() + "."
   }
 
 }
