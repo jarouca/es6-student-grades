@@ -1,6 +1,20 @@
 // define your student class, here
 
 class Student {
+  constructor(name, grades) {
+    this.name = name;
+    this.grades = grades;
+  }
+
+  averageGrade() {
+    let total = 0;
+    for (let grade of this.grades) {
+      grade += total;
+    }
+    return total / this.grades.length
+  }
+
+  
 
 }
 
