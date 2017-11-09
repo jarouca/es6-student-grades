@@ -104,3 +104,39 @@ let newPokemon = [pokemon[0], pokemon[1], pokemon[2]];
 pokemon; // ['Pikachu', 'Magikarp', 'Psyduck']
 newPokemon; // ['Pikachu', 'Magikarp', 'Psyduck']
 pokemon === newPokemon; // false
+
+// Example 17
+let name = 'Cloud Strife';
+let hitPoints = 9999;
+let magicPoints = 6000;
+let lvl = 99;
+
+let cloud = {
+  name: name,
+  hitPoints: hitPoints,
+  magicPoints: magicPoints,
+  level: lvl
+};
+
+// Example 18
+let name = 'Cloud Strife';
+let hitPoints = 9999;
+let magicPoints = 6000;
+let lvl = 99;
+
+let cloud = {
+  name,
+  hitPoints,
+  magicPoints,
+  level: lvl
+};
+
+// Example 20
+let aeris = {
+  firstName: 'Aeris',
+  lastName: 'Gainsborough',
+  fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+};
+aeris.fullName(); // 'Aeris Gainsborough'
