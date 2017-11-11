@@ -156,3 +156,28 @@ function character(prop, value) {
 }
 
 let tifa = character('name', 'Tifa'); // { name: 'Tifa' }
+
+// Example 25
+let sephiroth = {
+  name: 'Sephiroth',
+  hitPoints: 400000,
+  magicPoints: 680,
+  level: 87
+};
+
+let name = sephiroth.name;
+let magicPoints = sephiroth.magicPoints;
+name; //  'Sephiroth'
+magicPoints; // 680
+
+// Example 26
+let sephiroth = {
+  name: 'Sephiroth',
+  hitPoints: 400000,
+  magicPoints: 680,
+  level: 87
+};
+
+let { name, magicPoints } = sephiroth;
+name; //  'Sephiroth'
+magicPoints; // 680
