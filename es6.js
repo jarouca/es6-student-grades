@@ -140,3 +140,19 @@ let aeris = {
   }
 };
 aeris.fullName(); // 'Aeris Gainsborough'
+
+// Example 21
+function character(prop, value) {
+  return { prop: value };
+}
+
+let tifa = character('name', 'Tifa'); // { prop: 'Tifa' }
+
+// Example 22
+function character(prop, value) {
+  var char = {};
+  char[prop] = value;
+  return char;
+}
+
+let tifa = character('name', 'Tifa'); // { name: 'Tifa' }
