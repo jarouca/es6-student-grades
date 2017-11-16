@@ -250,3 +250,45 @@ processedOrderTwo.player; // 'Julian Edelman'
 processedOrderTwo.size; // 'Medium'
 processedOrderTwo.color; // 'blue'
 processedOrderTwo.quantity; // 1
+
+// Example 45
+let callFunction = function(callbackFunction) {
+  return callbackFunction();
+};
+
+let bottle = {
+  message: 'OH MY GAWD MY CODE WORKS!',
+  passMessageToCallback() {
+    let callbackFunctionFromBottle = function() {
+      return this.message;
+    };
+
+    return callFunction(callbackFunctionFromBottle);
+  }
+};
+
+bottle.passMessageToCallback(); // TypeError
+
+// Example 46
+...
+  passMessageToCallback() {
+    let callbackFunctionFromBottle = function() {
+      return this.message;
+    }.bind(this);
+
+    return callFunction(callbackFunctionFromBottle);
+  }
+...
+bottle.passMessageToCallback(); // 'OH MY GAWD MY CODE WORKS!'
+
+// Example 47
+...
+  passMessageToCallback() {
+    let callbackFunctionFromBottle = () => {
+      return this.message;
+    };
+
+    return callFunction(callbackFunctionFromBottle);
+  }
+...
+bottle.passMessageToCallback(); // 'OH MY GAWD MY CODE WORKS!'
