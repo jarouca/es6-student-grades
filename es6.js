@@ -334,3 +334,41 @@ janitor.firstName; // 'Glenn'
 janitor.lastName; // 'Matthews'
 janitor.fullName(); // 'Glenn Matthews'
 janitor.initials(); // 'GM'
+
+// Example 50
+let Person = function(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+}
+
+Person.prototype.fullName = function() {
+  return `${this.firstName} ${this.lastName}`;
+}
+
+Person.prototype.initials = function() {
+  return `${this.firstName[0]}${this.lastName[0]}`;
+}
+
+let Doctor = function(firstName, lastName, title) {
+  Person.call(this, firstName, lastName);
+  this.title = title;
+};
+
+Doctor.prototype = Object.create(Person.prototype);
+Doctor.prototype.constructor = Doctor;
+
+Doctor.prototype.fullName = function() {
+  return `${this.firstName} ${this.lastName}, ${this.title}`;
+}
+
+Doctor.prototype.saySomethingAwkward = function() {
+  return 'Wow, never seen this before';
+};
+
+let jd = new Doctor('John', 'Dorian', 'M.D.');
+jd.firstName; // 'John'
+jd.lastName; // 'Dorian'
+jd.title; // 'M.D.'
+jd.fullName(); // 'John Dorian, M.D.'
+jd.initials() // 'JD'
+jd.saySomethingAwkward(); // 'Wow, never seen this before'
