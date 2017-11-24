@@ -372,3 +372,42 @@ jd.title; // 'M.D.'
 jd.fullName(); // 'John Dorian, M.D.'
 jd.initials() // 'JD'
 jd.saySomethingAwkward(); // 'Wow, never seen this before'
+
+// Example 51
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+
+  initials() {
+    return `${this.firstName[0]}${this.lastName[0]}`;
+  }
+}
+
+class Doctor extends Person {
+  constructor(firstName, lastName, title) {
+    super(firstName, lastName);
+    this.title = title;
+  }
+
+  fullName() {
+    return `${this.firstName} ${this.lastName}, ${this.title}`;
+  }
+
+  saySomethingAwkward() {
+    return 'Wow, never seen this before';
+  };
+}
+
+let jd = new Doctor('John', 'Dorian', 'M.D.');
+jd.firstName; // 'John'
+jd.lastName; // 'Dorian'
+jd.title; // 'M.D.'
+jd.fullName(); // 'John Dorian, M.D.'
+jd.initials // 'JD'
+jd.saySomethingAwkward(); // 'Wow, never seen this before'
