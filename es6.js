@@ -411,3 +411,28 @@ jd.title; // 'M.D.'
 jd.fullName(); // 'John Dorian, M.D.'
 jd.initials // 'JD'
 jd.saySomethingAwkward(); // 'Wow, never seen this before'
+
+// Example 52
+class Person {
+  ...
+  fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+  ...
+}
+
+class Doctor extends Person {
+  ...
+  fullName() {
+    return `${super.fullName()}, ${this.title}`;
+  }
+  ...
+}
+
+jd.fullName(); // 'John Dorian, M.D.'
+
+// Example 57 - export.js
+let hi = 'hi';
+let hola = 'hola';
+let bonjour = 'bonjour';
+export { hi, hola, bonjour };
