@@ -436,3 +436,27 @@ let hi = 'hi';
 let hola = 'hola';
 let bonjour = 'bonjour';
 export { hi, hola, bonjour };
+
+let countrySingers = ['Luke Bryan', 'Florida Georgia Line', 'Carrie Underwood']
+for (let countrySinger of countrySingers) {
+  console.log(countrySinger);
+}
+
+let countrySingers = ['Luke Bryan', 'Florida Georgia Line', 'Carrie Underwood']
+for (let i = 0, length = countrySingers.length; i < length; i++) {
+  console.log(countrySingers[i]);
+}
+
+let pokemon = ['Pikachu', 'Magikarp', 'Psyduck'];
+let pikachu = pokemon[0];
+let magikarp = pokemon[1];
+let psyduck = pokemon[2];
+pikachu; // 'Pikachu'
+magikarp; // 'Magikarp'
+psyduck; // 'Psyduck'
+
+let pokemon = ['Pikachu', 'Magikarp', 'Psyduck'];
+let [pikachu, magikarp, psyduck] = pokemon;
+pikachu; // 'Pikachu'
+magikarp; // 'Magikarp'
+psyduck; // 'Psyduck'
