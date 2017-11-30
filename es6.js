@@ -459,4 +459,35 @@ let pokemon = ['Pikachu', 'Magikarp', 'Psyduck'];
 let [pikachu, magikarp, psyduck] = pokemon;
 pikachu; // 'Pikachu'
 magikarp; // 'Magikarp'
+
 psyduck; // 'Psyduck'
+
+let pokemon = ['Pikachu', 'Magikarp', 'Psyduck'];
+let newPokemon = [pokemon[0], pokemon[1], pokemon[2]];
+pokemon; // ['Pikachu', 'Magikarp', 'Psyduck']
+newPokemon; // ['Pikachu', 'Magikarp', 'Psyduck']
+pokemon === newPokemon; // false
+
+let name = 'Cloud Strife';
+let hitPoints = 9999;
+let magicPoints = 6000;
+let lvl = 99;
+
+let cloud = {
+  name: name,
+  hitPoints: hitPoints,
+  magicPoints: magicPoints,
+  level: lvl
+};
+
+let name = 'Cloud Strife';
+let hitPoints = 9999;
+let magicPoints = 6000;
+let lvl = 99;
+
+let cloud = {
+  name,
+  hitPoints,
+  magicPoints,
+  level: lvl
+};
