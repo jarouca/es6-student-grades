@@ -504,4 +504,36 @@ function character(prop, value) {
   return char;
 }
 
-let tifa = character('name', 'Tifa'); // { name: 'Tifa' }
+let tifa = character('name', 'Tifa'); // { name: 'Tifa' }let sephiroth = {
+  name: 'Sephiroth',
+  hitPoints: 400000,
+  magicPoints: 680,
+  level: 87
+};
+
+let name = sephiroth.name;
+let magicPoints = sephiroth.magicPoints;
+name; //  'Sephiroth'
+magicPoints; // 680
+
+let sephiroth = {
+  name: 'Sephiroth',
+  hitPoints: 400000,
+  magicPoints: 680,
+  level: 87
+};
+
+let { name, magicPoints } = sephiroth;
+name; //  'Sephiroth'
+magicPoints; // 680
+
+let sephiroth = {
+  name: 'Sephiroth',
+  hitPoints: 400000,
+  magicPoints: 680,
+  level: 87
+};
+
+let { name, magicPoints } = sephiroth;
+name; //  'Sephiroth'
+magicPoints; // 680
