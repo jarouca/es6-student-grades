@@ -491,3 +491,17 @@ let cloud = {
   magicPoints,
   level: lvl
 };
+
+function character(prop, value) {
+  return { prop: value };
+}
+
+let tifa = character('name', 'Tifa'); // { prop: 'Tifa' }
+
+function character(prop, value) {
+  var char = {};
+  char[prop] = value;
+  return char;
+}
+
+let tifa = character('name', 'Tifa'); // { name: 'Tifa' }
