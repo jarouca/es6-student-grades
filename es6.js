@@ -534,6 +534,19 @@ let sephiroth = {
   level: 87
 };
 
+
 let { name, magicPoints } = sephiroth;
 name; //  'Sephiroth'
 magicPoints; // 680
+
+let sephiroth = {
+  name: 'Sephiroth',
+  hitPoints: 400000,
+  magicPoints: 680,
+  level: 87
+};
+
+let { name, magicPoints, ...objectWithRemainingProperties } = sephiroth;
+name; //  'Sephiroth'
+magicPoints; // 680
+objectWithRemainingProperties; // {"hitPoints":400000,"level":87}
