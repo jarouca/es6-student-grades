@@ -550,3 +550,28 @@ let { name, magicPoints, ...objectWithRemainingProperties } = sephiroth;
 name; //  'Sephiroth'
 magicPoints; // 680
 objectWithRemainingProperties; // {"hitPoints":400000,"level":87}
+
+let order = {
+  player: 'Julian Edelman',
+  size: 'Medium',
+  color: 'blue'
+};
+
+let orderDefaults = {
+  size: 'Select',
+  color: 'blue',
+  quantity: 1
+};
+
+let assign = function(target, source) {
+    for (let i in source) {
+        target[i] = source[i];
+    }
+    return target;
+};
+
+orderDefaults = assign(orderDefaults, order);
+orderDefaults.player; // 'Julian Edelman'
+orderDefaults.size; // 'Medium'
+orderDefaults.color; // 'blue'
+orderDefaults.quantity; // 1
