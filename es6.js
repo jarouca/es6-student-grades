@@ -575,3 +575,20 @@ orderDefaults.player; // 'Julian Edelman'
 orderDefaults.size; // 'Medium'
 orderDefaults.color; // 'blue'
 orderDefaults.quantity; // 1
+
+let order = {
+  player: 'Julian Edelman',
+  size: 'Medium',
+  color: 'blue'
+};
+
+let orderDefaults = {
+  size: 'Select',
+  color: 'blue',
+  quantity: 1
+};
+
+orderDefaults = Object.assign(orderDefaults, order);
+orderDefaults.player; // 'Julian Edelman'
+orderDefaults.size; // 'Medium'
+orderDefaults.color; // 'blue'
