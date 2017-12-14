@@ -592,3 +592,46 @@ orderDefaults = Object.assign(orderDefaults, order);
 orderDefaults.player; // 'Julian Edelman'
 orderDefaults.size; // 'Medium'
 orderDefaults.color; // 'blue'
+
+// Example 30
+let orderDefaults = {
+  size: 'Select',
+  color: 'blue',
+  quantity: 1
+};
+
+let orderOne = {
+  player: 'Tom Brady',
+  size: 'Large',
+  color: 'red',
+  quantity: 2
+};
+
+orderDefaults = Object.assign(orderDefaults, orderOne);
+let processedOrderOne = Object.assign({}, orderDefaults);
+
+orderDefaults.quantity; // 2
+orderDefaults = {
+  size: 'Select',
+  color: 'blue',
+  quantity: 1
+};
+
+let orderTwo = {
+  player: 'Julian Edelman',
+  size: 'Medium',
+  color: 'blue'
+};
+
+Object.assign(orderDefaults, orderTwo);
+let processedOrderTwo = Object.assign({}, orderDefaults);
+
+processedOrderOne.player; // 'Tom Brady'
+processedOrderOne.size; // 'Large'
+processedOrderOne.color; // 'red'
+processedOrderOne.quantity; // 2
+
+processedOrderTwo.player; // 'Julian Edelman'
+processedOrderTwo.size; // 'Medium'
+processedOrderTwo.color; // 'blue'
+processedOrderTwo.quantity; // 1
