@@ -682,3 +682,22 @@ let announceDinnerChoice = function(dinnerChoice = 'a piece of cake') {
 };
 
 announceDinnerChoice(); // 'We are having a piece of cake for dinner!'
+
+// Example 34
+let appendToStrings = function(stringToAppend, arrayOfStrings) {
+  let newArray = [];
+  for (let word of arrayOfStrings) {
+    newArray.push(word + stringToAppend);
+  }
+  return newArray;
+};
+
+appendToStrings('?', ['What is love', 'Baby don\'t worry']); // ['What is love?', 'Baby don't worry?']
+
+// Example 35
+let appendToStrings = function(stringToAppend, ...arrayOfStrings) {
+  let newArray = [];
+  ...
+};
+
+appendToStrings('?', 'What is love', 'Baby don\'t worry'); // ['What is love?', 'Baby don't worry?']
