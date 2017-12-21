@@ -666,4 +666,13 @@ processedOrderOne.quantity; // 2
 processedOrderTwo.player; // 'Julian Edelman'
 processedOrderTwo.size; // 'Medium'
 processedOrderTwo.color; // 'blue'
+
 processedOrderTwo.quantity; // 1
+
+// Example 32
+let announceDinnerChoice = function(dinnerChoice) {
+  dinnerChoice = typeof dinnerChoice !== 'undefined' ? dinnerChoice : 'a piece of cake';
+  return `We are having ${dinnerChoice} for dinner!`;
+};
+
+announceDinnerChoice(); // 'We are having a piece of cake for dinner!'
