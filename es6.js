@@ -676,3 +676,9 @@ let announceDinnerChoice = function(dinnerChoice) {
 };
 
 announceDinnerChoice(); // 'We are having a piece of cake for dinner!'
+// Example 33
+let announceDinnerChoice = function(dinnerChoice = 'a piece of cake') {
+  return `We are having ${dinnerChoice} for dinner!`;
+};
+
+announceDinnerChoice(); // 'We are having a piece of cake for dinner!'
