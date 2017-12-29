@@ -701,3 +701,47 @@ let appendToStrings = function(stringToAppend, ...arrayOfStrings) {
 };
 
 appendToStrings('?', 'What is love', 'Baby don\'t worry'); // ['What is love?', 'Baby don't worry?']
+
+// Example 36
+function createHeader(text, options) {
+  let header = options.header || 'h1';
+  let className = options.className;
+
+  let headerElement = document.createElement(header);
+  let textNode = document.createTextNode(text);
+  headerElement.appendChild(textNode);
+  document.body.appendChild(headerElement);
+
+  if (className) {
+    headerElement.setAttribute('class', className);
+  }
+}
+
+createHeader('Hi dad!', {});
+// <h1>Hi dad!</h1> is appended to document body
+createHeader('Hi mom!', { header: 'h2', className: 'best-class-ever' });
+// <h2 class='best-class-ever'>Hi mom!</h2> is appended to document body
+
+/ Example 41
+let plusOne = (number) => {
+  return number + 1;
+};
+
+plusOne(1); // 2
+
+// Example 42
+let plusOne = number => {
+  number + 1
+};
+
+plusOne(1); // 2
+
+/ Example 43
+let plusOne = number => number + 1;
+
+plusOne(1); // 2
+
+// Example 44
+let returnObject = () => ({ message: 'this is correct' });
+
+returnObject().message; // 'this is correct'
