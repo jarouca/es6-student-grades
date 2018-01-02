@@ -745,3 +745,20 @@ plusOne(1); // 2
 let returnObject = () => ({ message: 'this is correct' });
 
 returnObject().message; // 'this is correct'
+
+let callFunction = function(callbackFunction) {
+  return callbackFunction();
+};
+
+let bottle = {
+  message: 'OH MY GAWD MY CODE WORKS!',
+  passMessageToCallback() {
+    let callbackFunctionFromBottle = function() {
+      return this.message;
+    };
+
+    return callFunction(callbackFunctionFromBottle);
+  }
+};
+
+bottle.passMessageToCallback(); // TypeError
