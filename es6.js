@@ -762,3 +762,15 @@ let bottle = {
 };
 
 bottle.passMessageToCallback(); // TypeError
+
+// Example 46
+...
+  passMessageToCallback() {
+    let callbackFunctionFromBottle = function() {
+      return this.message;
+    }.bind(this);
+
+    return callFunction(callbackFunctionFromBottle);
+  }
+...
+bottle.passMessageToCallback(); // 'OH MY GAWD MY CODE WORKS!'
