@@ -774,3 +774,23 @@ bottle.passMessageToCallback(); // TypeError
   }
 ...
 bottle.passMessageToCallback(); // 'OH MY GAWD MY CODE WORKS!'
+
+// Example 48
+let Person = function(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+}
+
+Person.prototype.fullName = function() {
+  return `${this.firstName} ${this.lastName}`;
+}
+
+Person.prototype.initials = function() {
+  return `${this.firstName[0]}${this.lastName[0]}`;
+}
+
+let janitor = new Person('Glenn', 'Matthews');
+janitor.firstName; // 'Glenn'
+janitor.lastName; // 'Matthews'
+janitor.fullName(); // 'Glenn Matthews'
+janitor.initials(); // 'GM'
