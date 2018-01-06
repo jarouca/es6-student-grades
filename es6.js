@@ -794,3 +794,25 @@ janitor.firstName; // 'Glenn'
 janitor.lastName; // 'Matthews'
 janitor.fullName(); // 'Glenn Matthews'
 janitor.initials(); // 'GM'
+
+// Example 49
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+
+  initials() {
+    return `${this.firstName[0]}${this.lastName[0]}`;
+  }
+}
+
+let janitor = new Person('Glenn', 'Matthews');
+janitor.firstName; // 'Glenn'
+janitor.lastName; // 'Matthews'
+janitor.fullName(); // 'Glenn Matthews'
+janitor.initials(); // 'GM'
